@@ -62,7 +62,9 @@ The vulnerability can be exploited using a simple HTML form:
 </form>
 ```
 
+
 ### Impact
+
 An attacker could:
 - Create new administrative users without authorization
 - Gain persistent access to the device
@@ -75,6 +77,7 @@ An attacker could:
 The third vulnerability discovered, rated as LOW severity, affects the Ping Test functionality located in the device's diagnostic tools (Maintenance -> Diagnostic -> Ping Test -> IP Address). The issue stems from inadequate input sanitization in the ping test function, which could allow an authenticated attacker to execute arbitrary commands on the device.
 
 ### Proof of Concept
+
 The vulnerability can be exploited by injecting commands into the ping test functionality. For demonstration purposes, we used DNS requests to exfiltrate sensitive system information:
 
 ```bash
@@ -95,6 +98,7 @@ These DNS queries confirmed that:
 - The web application is running with root privileges
 
 ### Impact
+
 An authenticated attacker could:
 - Execute arbitrary commands on the device
 - Gather sensitive system information
@@ -102,10 +106,12 @@ An authenticated attacker could:
 - Use the device as a pivot point for further network attacks
 
 ## Timeline and Resolution
+
 The vulnerability was discovered on September 29, 2022, and reported to PLANET Technology on March 29, 2023. The manufacturer released a firmware update (version 1.305b231218) on December 13, 2023, that addresses these vulnerabilities.
 
 
 ## Recommendations
+
 For network administrators using these devices, we recommend:
 
 1. Immediately upgrade to the latest available firmware
@@ -115,6 +121,7 @@ For network administrators using these devices, we recommend:
 
 
 ## Conclusion
+
 These vulnerabilities highlight the ongoing challenges in industrial device security. Basic security controls like session verification and CSRF protection should be standard features in any networked device, especially those deployed in critical industrial environments.
 
 This research underscores the importance of regular security assessments for industrial network equipment, as even seemingly basic vulnerabilities can have significant implications for operational technology environments.
