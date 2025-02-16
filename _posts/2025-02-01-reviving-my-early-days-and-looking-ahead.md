@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Reviving My Early Days and Looking Ahead -> [THE BEGINNINGS]"
-date: 2025-02-1
+date: 2025-02-01
 categories: [blog, revival]
 tags: [old, the beginnings, nostalgia]
 ---
