@@ -109,13 +109,13 @@ h3 {
 
 /*** Structure ***/
 #page {
-	width: 500px;
+	width: 960px;
 	margin: 0 auto;
 	position: relative;
 }
 
 #header {
-	width: 500px;
+	width: 960px;
 	margin: 40px auto 50px auto;
 }
 #header h1 {
@@ -127,7 +127,7 @@ h3 {
 }
 
 #footer {
-	width: 500px;
+	width: 960px;
 	margin: 50px auto 20px auto;
 	padding-top: 10px;
 	font-size: 0.85em;
@@ -135,17 +135,17 @@ h3 {
 }
 
 #content {
-	width: 500px;
+	width: 960px;
 	margin: 0 auto;
 }
 
 #sidebar {
-	position: absolute;
-	text-align: left;
-	width: 160px;
-	top: 0;
-	right: -240px;
-    border-left: 1px solid #ccc;
+   position: absolute;
+   text-align: left;
+   width: 160px;
+   top: 0;
+   right: -240px;
+   border-left: 1px solid #ccc;
 }
 
 #sidebar li {
