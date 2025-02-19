@@ -3,7 +3,7 @@ layout: post
 title: "CVE-2024-4600 and CVE-2024-4601. Security Vulnerabilities Found in Socomec NET VISION UPS Network Adapter"
 date: 2025-02-19
 categories: [security, research]
-tags: [vulnerabilities, network-security, socomec, ups-security, netvision]
+tags: [cve, vulnerabilities, network-security, socomec, ups-security, netvision]
 ---
 
 Net Vision is a communication interface designed for enterprise networks that enables a direct and secure connection between the UPS and the Ethernet network. This connection provides a wide range of network services, including UPS monitoring, event notifications, automatic shutdown of UPS-powered servers, and many other services. Net Vision also functions as an IoT gateway, granting access to a variety of digital services. It is compatible with all UPS models equipped with a communication slot.

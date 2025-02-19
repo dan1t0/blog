@@ -10,7 +10,7 @@ tags: [tools, contributions, opensource, old]
 En esta sección iré publicando una serie de enlaces a herramientas creadas por mi y contribuciones en diferentes blogs, espero que os sea de utilidad y vaya creciendo poco a poco. Todo esta licenciado bajo GPLv3
 
 #### Herramientas:
-* BascicAuthBF: Easy tool to bruteforce HTTP Basic access authentication like tomcat, CISCO, etc [bitbucket.org](https://bitbucket.org/dan1t0/basicauthbf)
+* BascicAuthBF: Easy tool to bruteforce HTTP Basic access authentication like tomcat, CISCO, etc [GitHub](https://github.com/dan1t0/basicauthbf) **Updated: 2025: The project was recently moved from BitBucket**
 
 
 #### Posts:

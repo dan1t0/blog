@@ -3,7 +3,7 @@ layout: post
 title: "CVE-2024-2740, CVE-2024-2741, and CVE-2024-2742. Critical Vulnerabilities Discovered in PLANET IGS-4215-16T2S Industrial Switches"
 date: 2025-02-12
 categories: [security, research]
-tags: [vulnerabilities, network-security, planet-technology, industrial-switches]
+tags: [cve, vulnerabilities, network-security, planet-technology, industrial-switches]
 ---
 
 Designed to be installed in heavy industrial demanding environments, the IGS-4215-16T2S / IGS-4215-16T2S-U is the new member of PLANET Industrial-grade, DIN-rail type L2/L4 Managed Gigabit Switch family to improve the availability of critical business applications. It provides IPv6/IPv4 dual stack management and built-in L2/L4 Gigabit switching engine along with 16 10/100/1000BASE-T ports, and 2 extra 100/1000BASE-X SFP fiber slots for data and video uplink. The IGS-4215-16T2S / IGS-4215-16T2S-U is able to operate reliably, stably and quietly in any hardened environment without affecting its performance. It comes with operating temperature ranging from -40 to 75 degrees C in a rugged IP30 metal housing.
