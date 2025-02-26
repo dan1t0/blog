@@ -172,3 +172,4 @@ RewriteRule ^.*$ https://acme-labo.okta.com? [L,R=302]
 In this post, we showcased how a PHP script can dynamically generate JavaScript for user redirection within a phishing campaign, complemented by advanced `.htaccess` rules for traffic management. By combining server-side validation with client-side dynamic redirection and leveraging Apache's rewrite capabilities, it is possible to bypass common email protections and maintain tight control over the traffic flow.
 
 This infrastructure setup allows GoPhish to remain internal while still serving external users through a reverse SSH proxy, reducing exposure and making detection more challenging.
+
