@@ -48,7 +48,7 @@ and not (http.host eq "landing.iamphishy.com" and http.request.uri.path eq "/fav
 
 ## The Caddyfile
 
-```caddyfile
+```
 # Redirect direct IP access to a harmless site (security measure)
 1.2.3.4 {
 	redir https://not-harmful.com{uri} permanent
