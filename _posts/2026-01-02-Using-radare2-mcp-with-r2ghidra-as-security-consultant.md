@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Using radare2 mcp with r2ghidra as security consultant"
-date: 2026-1-3
+date: 2026-01-02
 categories: [reversing, security, automation, docker]
 tags: [radare2, r2ghidra, r2mcp, opencode, docker, AI, automation, reversing, security]
 ---
@@ -118,7 +118,6 @@ Keep in mind that prompts don't always work the same way across all LLMs, especi
 
 *"One prompt to rule them all, one prompt to find them, one prompt to bring them all, and in the darkness bind them."*
 
-
 ## Demo
 
 Once everything is set up, using the tool is pretty easy. I created a bash script `run_r2agent.sh` that handles the Docker container setup and execution. Here's how you use it:
@@ -163,6 +162,7 @@ The analysis usually takes a few minutes depending on the binary size and comple
 To make this reproducible and avoid dependency issues, I dockerized everything. The Dockerfile is based on Ubuntu 24.04 and installs all the tools we need.
 
 The Dockerfile does the following:
+
 1. Installs build dependencies (gcc, make, git, cmake, etc.)
 2. Clones and compiles radare2 from source
 3. Creates a non-root user `op` for security
@@ -172,7 +172,8 @@ The Dockerfile does the following:
 7. Sets up the entrypoint script
 
 Here's the Dockerfile:
-```
+
+```dockerfile
 FROM ubuntu:24.04
 
 ARG DEBIAN_FRONTEND=noninteractive
@@ -379,6 +380,7 @@ I also created a watchdog script (`watchdog.sh`) specifically for the bot. Somet
 Security and restrictions: The bot uses an allowlist system where only specific Telegram user IDs can interact with it. Why? First, 99% of the code is vibecoded. And I'm not a professional developer, so there are probably bugs lurking in there somewhere. More importantly, I don't want my laptop to become someone else's free cloud computing service. The bot runs on my local server, and I'd rather not have random people on the internet sending me binaries to analyze 24/7, my CPU stays mine!
 
 Setup:
+
 1. Create a bot with [@BotFather](https://t.me/botfather) on Telegram
 2. Get your bot token
 3. Add your Telegram user ID to `allowlist.json`
