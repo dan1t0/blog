@@ -10,7 +10,7 @@ tags: [radare2, r2ghidra, r2mcp, opencode, docker, AI, automation, reversing, se
 
 As a security consultant, when you don't work on the same type of engagement every time, you must try to learn how to use thousands of different types of security tools. Nowadays, with Artificial Intelligence (AI) our way to approach these challenges has changed. Knowing how and when to use AI, our productivity improves drastically.
 
-In this post, I will explain how to create a quick reversing agent using [OpenCode](https://opencode.ai/), [radare2](https://github.com/radareorg/radare2), the Ghidra decompiler for radare2 ([r2ghidra](https://github.com/radareorg/r2ghidra)), and thanks to OpenCode Zen offering in OpenCode these free models: [Grok Code Fast 1, Big Pickle and GPT 5 Nano](https://opencode.ai/docs/zen).
+In this post, I will explain how to create a quick reversing agent using [OpenCode](https://opencode.ai/), [radare2](https://github.com/radareorg/radare2), the Ghidra decompiler for radare2 ([r2ghidra](https://github.com/radareorg/r2ghidra)), and thanks to OpenCode Zen offering in OpenCode these free models: [Grok Code Fast 1, Big Pickle and GPT 5 Nano, MiniMax M2.1, and GLM 4.7](https://opencode.ai/docs/zen#pricing).
 
 ### Extra Ball
 
@@ -41,7 +41,7 @@ r2pm -ci r2ghidra r2ghidra-sleigh r2mcp
 
 The `r2ghidra-sleigh` package contains the Sleigh language specification files that Ghidra uses for decompilation.
 
-[r2mcp](https://github.com/radareorg/r2mcp) makes radare2 accessible via the Model Context Protocol (MCP). MCP allows OpenCode (or other AI agents) to interact with radare2. It's included in the install command above.
+[r2mcp](https://github.com/radareorg/radare2-mcp) makes radare2 accessible via the Model Context Protocol (MCP). MCP allows OpenCode (or other AI agents) to interact with radare2. It's included in the install command above.
 
 Once installed you can configure the mcp to run as an stdio server with `r2pm -r r2mcp`. Press `^D` to close the stream or use `-h` to see the other commandline flags that we can use to tweak the mcp. The most important ones are `-m` (minimode to reduce the amount of tools to save context), `-r` and `-R` flags will make it readonly, other sandboxing features are also available but that’s out of the scope of this post.
 
