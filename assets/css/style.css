@@ -1,4 +1,8 @@
 /*** Reset ***/
+*, *::before, *::after {
+	box-sizing: border-box;
+}
+
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
 	margin: 0;
 	padding: 0;
@@ -58,6 +62,12 @@ sub { vertical-align: sub; font-size: 0.85em; }
 
 code {
     font: 0.85em Monaco, Courier, Monospace;
+}
+
+pre {
+    overflow-x: auto;
+    white-space: pre;
+    -webkit-overflow-scrolling: touch;
 }
 
 blockquote {
@@ -182,6 +192,8 @@ article img {
 	display: block;
 	text-align: center;
 	margin: 0 auto 1em auto;
+	max-width: 100%;
+	height: auto;
 }
 
 article .meta {
@@ -193,15 +205,21 @@ article .meta {
 img.left {
 	float: left;
 	margin: 0 1em 1em 0;
+	max-width: 100%;
+	height: auto;
 }
 img.right {
 	float: right;
 	margin: 0 0 1em 1em;
+	max-width: 100%;
+	height: auto;
 }
 img.center {
 	display: block;
 	text-align: center;
 	margin: 0 auto 1em auto;
+	max-width: 100%;
+	height: auto;
 }
 
 
@@ -211,6 +229,7 @@ img.center {
 	padding-top: 10px;
     text-align: center;
     font-size: 0.85em;
+    overflow: hidden;
 }
 
 .postnavigation .left {
@@ -221,28 +240,113 @@ img.center {
 	float: right;
 }
 
+@media all and (max-width: 480px) {
+	.postnavigation .left,
+	.postnavigation .right {
+		float: none;
+		display: block;
+		text-align: center;
+		margin: 5px 0;
+	}
+}
+
+
+/*** Tables ***/
+table {
+	width: 100%;
+	border-collapse: collapse;
+}
+
+@media all and (max-width: 870px) {
+	.table-wrap {
+		display: block;
+		overflow-x: auto;
+		-webkit-overflow-scrolling: touch;
+	}
+}
+
 
 
 /*** Media Queries ***/
+
+/* Medium screens: sidebar starts to get clipped (page 960px + sidebar at right:-240px = needs ~1160px) */
+@media all and (max-width: 1160px) {
+	#page, #header, #content, #footer {
+		width: 90%;
+	}
+}
+
+/* Tablet / mobile */
 @media all and (max-width: 870px) {
 
 	#page, #header, #content, #footer {
-		width: inherit;
-		padding-left: 10px;
-		padding-right: 10px;
+		width: 100%;
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+
+	#header {
+		margin: 20px auto 25px auto;
 	}
 
 	#sidebar {
 		position: relative;
-		text-align: left;
 		width: 100%;
-		left: 0;
-		margin: 10px 10px 20px 10px;
+		left: auto;
+		right: auto;
+		top: auto;
+		margin: 0 0 20px 0;
+		padding: 10px 0;
+		border-left: none;
+		border-bottom: 1px solid #073642;
+	}
+
+	#sidebar nav ul {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 6px;
+		padding: 0;
+	}
+
+	#sidebar li {
+		margin: 0;
+	}
+
+	#sidebar a {
+		display: inline-block;
+		padding: 6px 14px;
+		border: 1px solid #073642;
+		border-bottom: 1px solid #073642;
 	}
 
 	#sidebar nav select.mnav {
 		display: block;
 		margin-bottom: 15px;
+		width: 100%;
+	}
+
+	/* Float images: remove float on mobile to avoid text wrapping issues */
+	img.left, img.right {
+		float: none;
+		display: block;
+		margin: 0 auto 1em auto;
+	}
+
+}
+
+/* Small phones */
+@media all and (max-width: 480px) {
+
+	body {
+		font-size: 14px;
+	}
+
+	#header h1 {
+		font-size: 24px;
+	}
+
+	#header {
+		margin: 15px auto 20px auto;
 	}
 
 }
