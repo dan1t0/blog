@@ -63,12 +63,14 @@ sub { vertical-align: sub; font-size: 0.85em; }
 
 code {
     font: 0.85em Monaco, Courier, Monospace;
+    line-height: 1;
 }
 
 pre {
     overflow-x: auto;
     white-space: pre;
     -webkit-overflow-scrolling: touch;
+    line-height: 1;
 }
 
 blockquote {
