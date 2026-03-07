@@ -255,6 +255,17 @@ img.center {
 table {
 	width: 100%;
 	border-collapse: collapse;
+	margin: 1.5em 0;
+}
+table th, table td {
+	border: 1px solid #073642;
+	padding: 7px 12px;
+	text-align: left;
+}
+table thead th {
+	background-color: #073642;
+	border-bottom: 2px solid #2aa198;
+	font-weight: bold;
 }
 
 @media all and (max-width: 870px) {
