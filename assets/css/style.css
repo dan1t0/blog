@@ -290,6 +290,9 @@ table tbody tr:last-child td {
 		overflow-x: auto;
 		-webkit-overflow-scrolling: touch;
 	}
+	table {
+		border: 2px solid #073642;
+	}
 	table th, table td {
 		padding: 6px 8px;
 		font-size: 0.9em;
