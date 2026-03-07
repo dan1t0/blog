@@ -259,7 +259,7 @@ table {
 	margin: 1.5em 0;
 	border-radius: 6px;
 	overflow: hidden;
-	border: 1px solid #073642;
+	border: 2px solid #073642;
 }
 table th, table td {
 	border-bottom: 1px solid #073642;
