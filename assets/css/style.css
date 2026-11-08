@@ -38,7 +38,7 @@ table {
 body {
 	font-family: Verdana, serif;
 	font-size: 13px;
-	line-height: 1.7;
+	line-height: 1.5;
 }
 
 a, a:active, a:visited {
@@ -62,13 +62,20 @@ sup { vertical-align: super; font-size: 0.85em; }
 sub { vertical-align: sub; font-size: 0.85em; }
 
 code {
-    font: 0.85em Monaco, Courier, Monospace;
+    font: 1em Monaco, Courier, Monospace;
+}
+pre code {
+    font-size: 0.85em;
 }
 
 pre {
     overflow-x: auto;
-    white-space: pre;
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+    word-break: break-word;
     -webkit-overflow-scrolling: touch;
+    /* ~1.4 relative to the 0.85em code font */
+    line-height: 1.2;
 }
 
 blockquote {
@@ -195,6 +202,13 @@ article img {
 	margin: 0 auto 1em auto;
 	max-width: 100%;
 	height: auto;
+}
+article p:has(> img) {
+	text-align: center;
+}
+article p:has(> img) + p > em:only-child {
+	display: block;
+	text-align: center;
 }
 
 article .meta {
